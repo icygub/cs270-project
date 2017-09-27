@@ -1,36 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/**
+ * John Diaz and Gibran
+ * CS 270
+ * */
 namespace Project1 {
     public class CustomerBase {
-        List<Customer> customers = new List<Customer>();
 
+        
+        List<Object> customers = new List<Object>();
+        List<string> strings = new List<string>();
+
+        public void addString(string s) {
+            strings.Add(s);
+        }
+
+        public int getStringsSize() {
+            return strings.Count;
+        }
         public bool addCustomer(Customer customer) {
             //blank name is not allowed
+            //THERE IS A PROBLEM IN THIS STATEMENT
             if (string.IsNullOrEmpty(customer.Name)) {
                 return false;
             }
+
             //check for duplicate customer id, which is not allowed
+            //THERE IS A PROBLEM SOMEWHERE IN THIS LOOP
             foreach (Customer c in customers) {
                 if (customer.Id == c.Id) {
                     //duplicate found
-                    System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " NOT added.");
                     return false;
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " added.");
+
             customers.Add(new Customer(customer.Name, customer.Id));
             return true;
         }
 
         public Customer findCustomer(int id) {
-            if (customers.Count == 0) {
-                System.Diagnostics.Debug.WriteLine("There are no customers.");
-                return null;
-            }
+            //unit test is failing right here
+            
             foreach (Customer c in customers) {
                 if (c.Id == id) {
                     return c;
@@ -70,6 +84,10 @@ namespace Project1 {
                 System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " was NOT found and NOT edited.");
                 return null;
             }
+        }
+
+        public int getListSize() {
+            return customers.Count;
         }
     }
 }
