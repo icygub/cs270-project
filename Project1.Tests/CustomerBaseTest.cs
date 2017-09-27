@@ -66,6 +66,27 @@ namespace Project1.Tests {
         }
 
         [TestClass]
+        public class DeleteCustomer_Should {
+            [TestMethod]
+            public void ReturnTrue_WhenCustomerIsDeletedUsingID() {
+
+            }
+            [TestMethod]
+            public void ReturnFalse_WhenCustomerIsNotDeletedUsingID() {
+
+            }
+        }
+
+        [TestClass]
+        public class EditCustomer_Should {
+            [TestMethod]
+            public void ReturnTrue_WhenCustomerNameIsEdited() {
+
+            }
+
+        }
+
+        [TestClass]
         public class GetListSize_Should {
             [TestMethod]
             public void Return3_WhenThreeCustomersAreAdded() {
