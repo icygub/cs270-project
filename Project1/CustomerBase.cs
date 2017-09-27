@@ -9,6 +9,10 @@ namespace Project1 {
         List<Customer> customers = new List<Customer>();
 
         public bool addCustomer(Customer customer) {
+            //blank name is not allowed
+            if (string.IsNullOrEmpty(customer.Name)) {
+                return false;
+            }
             //check for duplicate customer id, which is not allowed
             foreach (Customer c in customers) {
                 if (customer.Id == c.Id) {

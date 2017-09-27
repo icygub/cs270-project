@@ -1,0 +1,2 @@
+C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\Project1.Tests.csproj;x86
+C:\Users\icyhot\source\repos\cs270-project\Project1\Project1.csproj;x86

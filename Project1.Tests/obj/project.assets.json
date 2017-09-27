@@ -2220,6 +2220,19 @@
             "rid": "aot"
           }
         }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
@@ -4523,6 +4536,19 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
         }
       }
     },
@@ -6864,6 +6890,19 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
@@ -9176,6 +9215,19 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
         }
       }
     },
@@ -11526,6 +11578,19 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
@@ -13838,6 +13903,19 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
         }
       }
     },
@@ -16187,6 +16265,19 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Project1/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0.10586",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Project1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project1.dll": {}
         }
       }
     }
@@ -24607,13 +24698,19 @@
         "system.xml.xmlserializer.4.0.11.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Project1/1.0.0": {
+      "type": "project",
+      "path": "../Project1/Project1.csproj",
+      "msbuildProject": "../Project1/Project1.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
       "MSTest.TestAdapter >= 1.1.18",
       "MSTest.TestFramework >= 1.1.18",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.4.0",
+      "Project1 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -24642,11 +24739,19 @@
       },
       "frameworks": {
         "uap10.0.10586": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\icyhot\\source\\repos\\cs270-project\\Project1\\Project1.csproj": {
+              "projectPath": "C:\\Users\\icyhot\\source\\repos\\cs270-project\\Project1\\Project1.csproj"
+            }
+          }
         }
       }
     },
     "dependencies": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "target": "Package",
+        "version": "5.4.0"
+      },
       "MSTest.TestAdapter": {
         "target": "Package",
         "version": "1.1.18"
@@ -24654,15 +24759,15 @@
       "MSTest.TestFramework": {
         "target": "Package",
         "version": "1.1.18"
-      },
-      "Microsoft.NETCore.UniversalWindowsPlatform": {
-        "target": "Package",
-        "version": "[5.4.0, )"
       }
     },
     "frameworks": {
       "uap10.0.10586": {
         "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": {
+            "target": "Package",
+            "version": "5.4.0"
+          },
           "MSTest.TestAdapter": {
             "target": "Package",
             "version": "1.1.18"
