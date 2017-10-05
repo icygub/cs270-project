@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace Project1 {
     public class CustomerBase {
 
-        
         List<Object> customers = new List<Object>();
         List<string> strings = new List<string>();
 
@@ -23,8 +22,8 @@ namespace Project1 {
             return strings.Count;
         }
         public bool addCustomer(Customer customer) {
-            //blank name is not allowed
-            //THERE IS A PROBLEM IN THIS STATEMENT
+            //blank or null name is not allowed
+        
             if (string.IsNullOrEmpty(customer.Name)) {
                 return false;
             }
@@ -91,4 +90,3 @@ namespace Project1 {
         }
     }
 }
-

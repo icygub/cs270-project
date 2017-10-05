@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Project1 {
     public class Customer {
-        private string name;
-        private int id;
-
+        
         public Customer(string name, int id) {
-            this.name = name;
-            this.id = id;
+            this.Name = name;
+            this.Id = id;
         }
 
         public string Name {

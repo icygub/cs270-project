@@ -8,48 +8,40 @@ namespace Project1.Tests {
     public class CustomerBaseTest {
 
         [TestClass]
-        public class AddCustomer_Should { //in either case, TRUE means customer was successfully added.
+        public class AddCustomer_Should { //WORKING
             [TestMethod]
-            public void ReturnTrue_WhenOneCustomerIsAdded() {
+            public void ReturnTrue_WhenOneCustomerIsAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
+                Assert.IsTrue(customerBase.getListSize() == 0);
                 Assert.IsTrue(customerBase.addCustomer(new Customer("John", 1234)));
+                Assert.IsTrue(customerBase.getListSize() == 1);
                 
             }
             [TestMethod]
-            public void ReturnTrue_WhenMultipleCustomersAreAdded() { //NOT WORKING AT ALL. CAN ONLY ADD ONE, BUT NOT MULTIPLE
+            public void ReturnTrue_WhenMultipleCustomersAreAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
+                Assert.IsTrue(customerBase.getListSize() == 0);
                 Assert.IsTrue(customerBase.addCustomer(new Customer("John", 4)));
                 Assert.IsTrue(customerBase.addCustomer(new Customer("Abraham", 3456)));
                 Assert.IsTrue(customerBase.addCustomer(new Customer("Isaac", 7890)));
+                Assert.IsTrue(customerBase.getListSize() == 3);
 
-                
+
             }
             [TestMethod]
-            public void ReturnFalse_WhenIDAlreadyExists() { //not working
+            public void ReturnFalse_WhenIDAlreadyExists() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 customerBase.addCustomer(new Customer("Gibran", 1111));
                 customerBase.addCustomer(new Customer("Cody", 2222));
-                Assert.IsFalse(customerBase.addCustomer(new Customer("Michael", 333)));
+                customerBase.addCustomer(new Customer("James", 3333));
+                Assert.IsFalse(customerBase.addCustomer(new Customer("Michael", 3333)));
             }
             [TestMethod]
             public void ReturnFalse_WhenNameIsAnEmptyStringOrNull() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 Assert.IsFalse(customerBase.addCustomer(new Customer("", 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer("", 44444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer("", 44444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer("", 4444)));
                 Assert.IsFalse(customerBase.addCustomer(new Customer(null, 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 4444)));
-            }
-            [TestMethod]
-            public void testTesting() {
-                CustomerBase customerBase = new CustomerBase();
-
-                customerBase.addString("asdf");
-                customerBase.addString("asdf");
-                Assert.IsTrue(2 == customerBase.getStringsSize());
+                Assert.IsTrue(customerBase.getListSize() == 0);
             }
         }
 

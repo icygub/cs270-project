@@ -5,9 +5,34 @@
     xmlns:local="using:Project1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="473">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView Height="640" VerticalAlignment="Top" Margin="0,0,232,0">
+            <TextBlock x:ConnectionId='5' x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
+            <TextBox x:ConnectionId='6' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
+            <TextBox x:ConnectionId='7' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
+            <Button x:ConnectionId='8' Content="Add"                           x:Name="add_customer_button_"/>
+            <TextBlock x:ConnectionId='9' x:Name="error_block_" Text=""/>
+            <TextBlock x:ConnectionId='10' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
+            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID"/>
+            <Button Content="Delete"/>
+
+        </ListView>
+        <ListView Margin="246,0,0,0">
+            <TextBlock x:ConnectionId='1' x:Name="edit_customer_block_" TextWrapping="Wrap" Text="Edit Customer" FontSize="20"/>
+            <TextBox x:ConnectionId='2' x:Name="id_to_replace_box_" TextWrapping="Wrap" PlaceholderText="ID of Cust. to Replace"/>
+            <TextBox x:ConnectionId='3' x:Name="new_id_box_" TextWrapping="Wrap" PlaceholderText="New Customer ID" />
+            <TextBox x:ConnectionId='4' x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
+            <Button Content="Edit"/>
+            <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
+            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID" />
+            <Button Content="Find"/>
+
+        </ListView>
+
+
+
 
     </Grid>
 </Page>

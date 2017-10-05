@@ -22,9 +22,30 @@ namespace Project1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private CustomerBase customerBase;
+
         public MainPage()
         {
             this.InitializeComponent();
+            this.customerBase = new CustomerBase();
+        }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+
+        }
+
+        private void AddCustomer_Click(object sender, RoutedEventArgs e) {
+            Button button = (Button)sender;
+            string customerName = customer_name_box_.Text;
+            int customerID = 0;
+            bool customerAdded;
+            try {
+                customerID = int.Parse(customer_id_box_.Text);
+                customerAdded = customerBase.addCustomer(new Customer(customerName, customerID));
+            } catch{
+                error_block_.Text = "Invalid ID input. Customer not added.";
+            }
+            error_block_.Text = customerBase.getListSize().ToString();
         }
     }
 }
