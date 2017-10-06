@@ -15,8 +15,9 @@
             <Button Content="Add" Click="AddCustomer_Click" x:Name="add_customer_button_"/>
             <TextBlock x:Name="error_block_" Text=""/>
             <TextBlock x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
-            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID"/>
+            <TextBox x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
             <Button Content="Delete" Click="DeleteCustomer_Click"/>
+            <TextBlock x:Name="delete_customer_result_block_" TextWrapping="Wrap" Text=""/>
 
         </ListView>
         <ListView Margin="246,0,0,0">

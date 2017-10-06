@@ -15,8 +15,9 @@
             <Button x:ConnectionId='11' Content="Add"                           x:Name="add_customer_button_"/>
             <TextBlock x:ConnectionId='12' x:Name="error_block_" Text=""/>
             <TextBlock x:ConnectionId='13' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
-            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID"/>
-            <Button x:ConnectionId='14' Content="Delete"                             />
+            <TextBox x:ConnectionId='14' x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
+            <Button x:ConnectionId='15' Content="Delete"                             />
+            <TextBlock x:ConnectionId='16' x:Name="delete_customer_result_block_" TextWrapping="Wrap" Text=""/>
 
         </ListView>
         <ListView Margin="246,0,0,0">

@@ -35,30 +35,21 @@ namespace Project1 {
         }
 
         public Customer findCustomer(int id) {
-            //unit test is failing right here
-            
             foreach (Customer c in customers) {
                 if (c.Id == id) {
                     return c;
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Customer " + id + " not found");
             return null;
         }
 
-        public void deleteCustomer(Customer customer) {
-            bool customerFound = false;
+        public bool deleteCustomer(int id) {
             //check if the customer exists
-            foreach (Customer c in customers) {
-                if (c.Id == customer.Id) {
-                    customers.Remove(customer);
-                    System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " was found and removed.");
-                    customerFound = true;
-                    break;
-                }
-            }
-            if (!customerFound) {
-                System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " was NOT found and NOT removed.");
+            Customer customer = findCustomer(id);
+            if(customer != null) {
+                return customers.Remove(customer);
+            } else {
+                return false;
             }
         }
 

@@ -48,7 +48,26 @@ namespace Project1
         }
 
         private void DeleteCustomer_Click(object sender, RoutedEventArgs e) {
+            int id;
+            Customer customer;
+            //making sure user enters an int
+            try {
+                id = int.Parse(delete_customer_by_id_box_.Text);
+            }
+            catch {
+                delete_customer_result_block_.Text = "ID input is not an int";
+                return;
+            }
 
+            customer = customerBase.findCustomer(id);
+            //will be false if customer ID does not exist
+            if(customer != null) {
+                string name = customer.Name;
+                customerBase.deleteCustomer(id);
+                delete_customer_result_block_.Text = "Customer [" + name + "] [" + id + "] has been deleted";
+            } else {
+                delete_customer_result_block_.Text = "Customer does not exist.";
+            }
         }
 
         private void FindCustomer_Click(object sender, RoutedEventArgs e) {
