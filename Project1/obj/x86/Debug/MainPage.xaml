@@ -9,14 +9,14 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView Height="640" VerticalAlignment="Top" Margin="0,0,232,0">
-            <TextBlock x:ConnectionId='5' x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
-            <TextBox x:ConnectionId='6' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
-            <TextBox x:ConnectionId='7' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
-            <Button x:ConnectionId='8' Content="Add"                           x:Name="add_customer_button_"/>
-            <TextBlock x:ConnectionId='9' x:Name="error_block_" Text=""/>
-            <TextBlock x:ConnectionId='10' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
+            <TextBlock x:ConnectionId='8' x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
+            <TextBox x:ConnectionId='9' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
+            <TextBox x:ConnectionId='10' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
+            <Button x:ConnectionId='11' Content="Add"                           x:Name="add_customer_button_"/>
+            <TextBlock x:ConnectionId='12' x:Name="error_block_" Text=""/>
+            <TextBlock x:ConnectionId='13' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
             <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID"/>
-            <Button Content="Delete"/>
+            <Button x:ConnectionId='14' Content="Delete"                             />
 
         </ListView>
         <ListView Margin="246,0,0,0">
@@ -26,8 +26,9 @@
             <TextBox x:ConnectionId='4' x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
             <Button Content="Edit"/>
             <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
-            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID" />
-            <Button Content="Find"/>
+            <TextBox x:ConnectionId='5' x:Name="find_customer_by_id_box_" PlaceholderText="Customer ID" />
+            <Button x:ConnectionId='6' Content="Find"                           />
+            <TextBlock x:ConnectionId='7' x:Name="found_customer_block_" Text=""/>
 
         </ListView>
 

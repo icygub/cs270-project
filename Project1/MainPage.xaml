@@ -16,7 +16,7 @@
             <TextBlock x:Name="error_block_" Text=""/>
             <TextBlock x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
             <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID"/>
-            <Button Content="Delete"/>
+            <Button Content="Delete" Click="DeleteCustomer_Click"/>
 
         </ListView>
         <ListView Margin="246,0,0,0">
@@ -26,8 +26,9 @@
             <TextBox x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
             <Button Content="Edit"/>
             <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
-            <TextBox TextWrapping="Wrap" PlaceholderText="Customer ID" />
-            <Button Content="Find"/>
+            <TextBox x:Name="find_customer_by_id_box_" PlaceholderText="Customer ID" />
+            <Button Content="Find" Click="FindCustomer_Click"/>
+            <TextBlock x:Name="found_customer_block_" Text=""/>
 
         </ListView>
 

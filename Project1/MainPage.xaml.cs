@@ -35,7 +35,6 @@ namespace Project1
         }
 
         private void AddCustomer_Click(object sender, RoutedEventArgs e) {
-            Button button = (Button)sender;
             string customerName = customer_name_box_.Text;
             int customerID = 0;
             bool customerAdded;
@@ -46,6 +45,31 @@ namespace Project1
                 error_block_.Text = "Invalid ID input. Customer not added.";
             }
             error_block_.Text = customerBase.getListSize().ToString();
+        }
+
+        private void DeleteCustomer_Click(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void FindCustomer_Click(object sender, RoutedEventArgs e) {
+            int searchID;
+            Customer foundCustomer;
+            TextBlock text_block = found_customer_block_; //displays results. Created text_block to avoid repetition
+            try {
+                searchID = int.Parse(find_customer_by_id_box_.Text);
+            } catch {
+                text_block.Text = "ID input is not an int";
+                return;
+            }
+
+            foundCustomer = customerBase.findCustomer(searchID);
+            if(foundCustomer != null) {
+                text_block.Text = "NAME: [" + foundCustomer.Name + "] ID: [" + foundCustomer.Id +"]";
+            }
+            else {
+                text_block.Text = "Customer not found";
+            }
+            
         }
     }
 }
