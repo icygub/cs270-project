@@ -22,10 +22,11 @@
         </ListView>
         <ListView Margin="246,0,0,0">
             <TextBlock x:Name="edit_customer_block_" TextWrapping="Wrap" Text="Edit Customer" FontSize="20"/>
-            <TextBox x:Name="id_to_replace_box_" TextWrapping="Wrap" PlaceholderText="ID of Cust. to Replace"/>
+            <TextBox x:Name="old_id_box_" TextWrapping="Wrap" PlaceholderText="ID of Cust. to Replace"/>
             <TextBox x:Name="new_id_box_" TextWrapping="Wrap" PlaceholderText="New Customer ID" />
             <TextBox x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
-            <Button Content="Edit"/>
+            <Button Content="Edit" Click="EditCustomer_Click"/>
+            <TextBlock x:Name="edit_block_" TextWrapping="Wrap" Text=""/>
             <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
             <TextBox x:Name="find_customer_by_id_box_" PlaceholderText="Customer ID" />
             <Button Content="Find" Click="FindCustomer_Click"/>

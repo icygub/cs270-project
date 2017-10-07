@@ -53,20 +53,41 @@ namespace Project1 {
             }
         }
 
-        public Customer editCustomer(Customer customer, String nameEdits) {
+        public bool editCustomer(int id, int newId, string newName) {
+            Customer customer = findCustomer(id);
+
+            //no customers in customerBase
             if (customers.Count == 0) {
-                System.Diagnostics.Debug.WriteLine("There are no customers.");
-                return null;
+                return false;
             }
-            //customer found
-            else if (findCustomer(customer.Id) == null) {
-                customer.Name = nameEdits;
-                return customer;
+            //cannot edit because newId value already exists
+            else if (searchForDuplicateId(newId)) {
+                return false;
+            }
+            //customer to edit does not exists
+            else if (customer == null) {
+                return false;
+            }
+            //blank name not allowed
+            else if (newName == "") {
+                return false;
             }
             else {
-                System.Diagnostics.Debug.WriteLine("Customer " + customer.Id + " was NOT found and NOT edited.");
-                return null;
+                customer.Id = newId;
+                customer.Name = newName;
+                return true;
+            }         
+        }
+
+        private bool searchForDuplicateId(int id) {
+            foreach (Customer c in customers) {
+                if(c.Id == id) {
+                    //duplicate exists
+                    return true;
+                }
             }
+            //no duplicates exist
+            return false;
         }
 
         public int getListSize() {

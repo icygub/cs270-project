@@ -87,8 +87,37 @@ namespace Project1
             }
             else {
                 text_block.Text = "Customer not found";
+            }   
+        }
+
+        private void EditCustomer_Click(object sender, RoutedEventArgs e) {
+            int oldId;
+            int newId;
+            string newName = new_name_box_.Text;
+            TextBox idTextBox = old_id_box_;
+            TextBox newIdTextBox = new_id_box_;
+            TextBlock textBlock = edit_block_;
+            if (textIsConvertibleToInt(idTextBox, textBlock) && textIsConvertibleToInt(newIdTextBox, textBlock)) {
+                oldId = int.Parse(idTextBox.Text);
+                newId = int.Parse(newIdTextBox.Text);
+                if (customerBase.editCustomer(oldId, newId, newName)) {
+                    edit_block_.Text = "Success!";
+                }
+                else {
+                    edit_block_.Text = "Failure.";
+                }
             }
             
+        }
+
+        private bool textIsConvertibleToInt(TextBox textBox, TextBlock textBlock) {
+            try {
+                int.Parse(textBox.Text);
+                return true;
+            } catch {
+                textBlock.Text = "ID input is not an int.";
+                return false;
+            }
         }
     }
 }
