@@ -18,7 +18,7 @@ namespace Project1.Tests {
                 
             }
             [TestMethod]
-            public void ReturnTrue_WhenMultipleCustomersAreAdded() { //WORKING
+            public void ReturnTrue_WhenThreeCustomersAreAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 Assert.IsTrue(customerBase.getListSize() == 0);
                 Assert.IsTrue(customerBase.addCustomer(new Customer("John", 4)));
@@ -40,7 +40,7 @@ namespace Project1.Tests {
             public void ReturnFalse_WhenNameIsAnEmptyStringOrNull() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 Assert.IsFalse(customerBase.addCustomer(new Customer("", 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 4444)));
+                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 2222)));
                 Assert.IsTrue(customerBase.getListSize() == 0);
             }
         }
@@ -53,19 +53,37 @@ namespace Project1.Tests {
                 customerBase.addCustomer(new Customer("Joey", 1121));
                 customerBase.addCustomer(new Customer("Jordan", 9999));
                 customerBase.addCustomer(new Customer("Jacob", 2223));
+                Assert.IsNotNull(customerBase.findCustomer(1121));
                 Assert.IsNotNull(customerBase.findCustomer(9999));
+                Assert.IsNotNull(customerBase.findCustomer(2223));
+            }
+            [TestMethod]
+            public void ReturnNull_WhenCustomerIDIsNotFound() {
+                CustomerBase customerBase = new CustomerBase();
+                customerBase.addCustomer(new Customer("Jackson", 1234));
+                customerBase.addCustomer(new Customer("Roger", 5678));
+                Assert.IsNull(customerBase.findCustomer(3344));
             }
         }
 
         [TestClass]
         public class DeleteCustomer_Should {
             [TestMethod]
-            public void ReturnTrue_WhenCustomerIsDeletedUsingID() {
-
+            public void ReturnTrue_WhenCustomerIsDeleted() {
+                CustomerBase customerBase = new CustomerBase();
+                customerBase.addCustomer(new Customer("Joseph", 1329));
+                customerBase.addCustomer(new Customer("Brigham", 8791));
+                Assert.IsTrue(customerBase.deleteCustomer(1329));
+                Assert.IsTrue(customerBase.deleteCustomer(8791));
+                Assert.IsTrue(customerBase.getListSize() == 0);
             }
             [TestMethod]
-            public void ReturnFalse_WhenCustomerIsNotDeletedUsingID() {
-
+            public void ReturnFalse_WhenCustomerIdDoesNotExist() {
+                CustomerBase customerBase = new CustomerBase();
+                customerBase.addCustomer(new Customer("Abraham", 8734));
+                customerBase.addCustomer(new Customer("Lincoln", 9010));
+                Assert.IsFalse(customerBase.deleteCustomer(7777));
+                Assert.IsTrue(customerBase.getListSize() == 2);
             }
         }
 

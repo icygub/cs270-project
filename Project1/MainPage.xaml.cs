@@ -97,14 +97,18 @@ namespace Project1
             TextBox idTextBox = old_id_box_;
             TextBox newIdTextBox = new_id_box_;
             TextBlock textBlock = edit_block_;
+            if (idTextBox.Text == "") {
+                textBlock.Text = "Initial ID required!";
+                return;
+            }
             if (textIsConvertibleToInt(idTextBox, textBlock) && textIsConvertibleToInt(newIdTextBox, textBlock)) {
                 oldId = int.Parse(idTextBox.Text);
                 newId = int.Parse(newIdTextBox.Text);
                 if (customerBase.editCustomer(oldId, newId, newName)) {
-                    edit_block_.Text = "Success!";
+                    textBlock.Text = "Success!";
                 }
                 else {
-                    edit_block_.Text = "Failure.";
+                    textBlock.Text = "Failure.";
                 }
             }
             

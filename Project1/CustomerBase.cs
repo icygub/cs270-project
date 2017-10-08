@@ -47,6 +47,7 @@ namespace Project1 {
             //check if the customer exists
             Customer customer = findCustomer(id);
             if(customer != null) {
+                //returns true
                 return customers.Remove(customer);
             } else {
                 return false;
@@ -60,12 +61,12 @@ namespace Project1 {
             if (customers.Count == 0) {
                 return false;
             }
-            //cannot edit because newId value already exists
-            else if (searchForDuplicateId(newId)) {
-                return false;
-            }
             //customer to edit does not exists
             else if (customer == null) {
+                return false;
+            }
+            //cannot edit because newId value already exists
+            else if (searchForDuplicateId(newId)) {
                 return false;
             }
             //blank name not allowed
