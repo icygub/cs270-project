@@ -400,6 +400,9 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\UserStories.txt">
+      <PackagePath>UserStories.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.xr.xml">
       <PackagePath>Project1.xr.xml</PackagePath>
     </AppxPackagedFile>

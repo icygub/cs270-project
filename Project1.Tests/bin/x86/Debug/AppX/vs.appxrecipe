@@ -31,17 +31,17 @@
     <AppXManifest Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-07T01:55:40.259</Modified>
+      <Modified>2017-10-09T17:05:07.082</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Project1.Tests.exe">
       <PackagePath>entrypoint\Project1.Tests.exe</PackagePath>
-      <Modified>2017-10-07T01:55:35.661</Modified>
+      <Modified>2017-10-09T17:05:01.375</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.exe">
       <PackagePath>Project1.exe</PackagePath>
-      <Modified>2017-10-07T01:55:33.045</Modified>
+      <Modified>2017-10-09T17:04:58.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\15.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll</PackagePath>
@@ -597,6 +597,10 @@
       <PackagePath>Project1.xr.xml</PackagePath>
       <Modified>2017-10-05T23:36:28.454</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\UserStories.txt">
+      <PackagePath>UserStories.txt</PackagePath>
+      <Modified>2017-10-09T17:04:54.273</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-11T19:40:57.101</Modified>
@@ -604,11 +608,11 @@
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-07T01:55:36.996</Modified>
+      <Modified>2017-10-09T17:05:03.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Core\Project1.Tests.exe">
       <PackagePath>Project1.Tests.exe</PackagePath>
-      <Modified>2017-10-07T01:55:40.248</Modified>
+      <Modified>2017-10-09T17:05:07.069</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

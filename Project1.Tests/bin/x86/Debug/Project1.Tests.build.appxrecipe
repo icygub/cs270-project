@@ -448,6 +448,9 @@
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.xr.xml">
       <PackagePath>Project1.xr.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\UserStories.txt">
+      <PackagePath>UserStories.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

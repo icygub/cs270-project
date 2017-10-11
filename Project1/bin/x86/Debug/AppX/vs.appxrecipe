@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-07T03:17:52.360</Modified>
+      <Modified>2017-10-11T20:13:10.919</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.exe">
       <PackagePath>entrypoint\Project1.exe</PackagePath>
-      <Modified>2017-10-07T03:17:51.995</Modified>
+      <Modified>2017-10-11T20:13:10.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -533,9 +533,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2017-09-11T18:58:46.937</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\UserStories.txt">
+      <PackagePath>UserStories.txt</PackagePath>
+      <Modified>2017-10-11T19:43:30.068</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.xr.xml">
       <PackagePath>Project1.xr.xml</PackagePath>
-      <Modified>2017-10-05T23:36:28.454</Modified>
+      <Modified>2017-10-11T20:13:10.005</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +548,11 @@
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-07T01:19:44.348</Modified>
+      <Modified>2017-10-11T20:13:10.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Core\Project1.exe">
       <PackagePath>Project1.exe</PackagePath>
-      <Modified>2017-10-07T03:17:52.354</Modified>
+      <Modified>2017-10-11T20:13:10.915</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

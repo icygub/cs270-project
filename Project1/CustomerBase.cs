@@ -16,13 +16,10 @@ namespace Project1 {
 
         public bool addCustomer(Customer customer) {
             //blank or null name is not allowed
-        
             if (string.IsNullOrEmpty(customer.Name)) {
                 return false;
             }
-
-            //check for duplicate customer id, which is not allowed
-            //THERE IS A PROBLEM SOMEWHERE IN THIS LOOP
+        
             foreach (Customer c in customers) {
                 if (customer.Id == c.Id) {
                     //duplicate found
@@ -61,7 +58,7 @@ namespace Project1 {
             if (customers.Count == 0) {
                 return false;
             }
-            //customer to edit does not exists
+            //customer to edit does not exist
             else if (customer == null) {
                 return false;
             }
