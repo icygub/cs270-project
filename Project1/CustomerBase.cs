@@ -9,82 +9,99 @@ using System.Threading.Tasks;
  * CS 270
  * */
 namespace Project1 {
-    public class CustomerBase {
+    public class CustomerBase : Database {
 
-        List<System.Object> customers = new List<System.Object>();
-        //List<string> strings = new List<string>();
+        private List<BaseObject> customers;
 
-        public bool addCustomer(Object customer) {
-            //blank or null name is not allowed
-            if (string.IsNullOrEmpty(customer.Name)) {
-                return false;
-            }
-        
-            foreach (Object c in customers) {
-                if (customer.Id == c.Id) {
-                    //duplicate found
-                    return false;
-                }
-            }
-
-            customers.Add(new Object(customer.Name, customer.Id));
-            return true;
+        public CustomerBase() : base() {
+            customers = base.ObjectList;
         }
 
-        public Object findCustomer(int id) {
-            foreach (Object c in customers) {
-                if (c.Id == id) {
-                    return c;
-                }
+        public override bool add(BaseObject customer) {
+            //blank or null name is not allowed
+            if (string.IsNullOrEmpty(((Customer)customer).Name)) {
+                return false;
             }
+
+            return base.add(customer as Customer);
+        }
+
+        //public override bool add(Customer customer) {
+        //    //blank or null name is not allowed
+        //    //if (string.IsNullOrEmpty(customer.Name)) {
+        //    //    return false;
+        //    //}
+
+        //    foreach (BaseObject c in customers) {
+        //        if (customer.PrimaryKey == c.PrimaryKey) {
+        //            //duplicate found
+        //            return false;
+        //        }
+        //    }
+
+        //    base.add(customer);
+        //    return true;
+        //}
+
+        public Customer findCustomer(int id) {
+            //foreach (Customer c in customers) {
+            //    if (c.PrimaryKey == id) {
+            //        return c;
+            //    }
+            //}
+            //return null;
             return null;
         }
 
         public bool deleteCustomer(int id) {
-            //check if the customer exists
-            Object customer = findCustomer(id);
-            if(customer != null) {
-                //returns true
-                return customers.Remove(customer);
-            } else {
-                return false;
-            }
+            ////check if the customer exists
+            //BaseObject customer = findCustomer(id);
+            //if (customer != null) {
+            //    //returns true
+            //    return customers.Remove(customer);
+            //}
+            //else {
+            //    return false;
+            //}
+            return false;
         }
 
         public bool editCustomer(int id, int newId, string newName) {
-            Object customer = findCustomer(id);
+            //BaseObject customer = findCustomer(id);
 
-            //no objList in customerBase
-            if (customers.Count == 0) {
-                return false;
-            }
-            //customer to edit does not exist
-            else if (customer == null) {
-                return false;
-            }
-            //cannot edit because newId value already exists
-            else if (searchForDuplicateId(newId)) {
-                return false;
-            }
-            //blank name not allowed
-            else if (newName == "") {
-                return false;
-            }
-            else {
-                customer.Id = newId;
-                customer.Name = newName;
-                return true;
-            }         
+            ////no objectList in customerBase
+            //if (customers.Count == 0) {
+            //    return false;
+            //}
+            ////customer to edit does not exist
+            //else if (customer == null) {
+            //    return false;
+            //}
+            ////cannot edit because newId value already exists
+            //else if (searchForDuplicateId(newId)) {
+            //    return false;
+            //}
+            ////blank name not allowed
+            //else if (newName == "") {
+            //    return false;
+            //}
+            //else {
+            //    customer.Id = newId;
+            //    customer.Name = newName;
+            //    return true;
+            //}
+            return false;
         }
 
         private bool searchForDuplicateId(int id) {
-            foreach (Object c in customers) {
-                if(c.Id == id) {
-                    //duplicate exists
-                    return true;
-                }
-            }
-            //no duplicates exist
+            //foreach (BaseObject c in customers) {
+            //    if (c.Id == id) {
+            //        //duplicate exists
+            //        return true;
+            //    }
+            //}
+            ////no duplicates exist
+            //return false;
             return false;
         }
 

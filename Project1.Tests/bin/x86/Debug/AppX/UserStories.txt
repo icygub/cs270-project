@@ -7,3 +7,5 @@
 #7 - A user needs to edit a cargo plane
 #8 - A user needs to search for a cargo plane
 #9 - A user needs to schedule a cargo plane
+
+http://www.c-sharpcorner.com/UploadFile/2e414e/basic-navigation-between-pages-using-xaml-C-Sharp-in-windows-st/

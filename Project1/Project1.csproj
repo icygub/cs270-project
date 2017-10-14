@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BaseObject.cs" />
     <Compile Include="CargoPlane.cs" />
     <Compile Include="CargoPlanePage.xaml.cs">
       <DependentUpon>CargoPlanePage.xaml</DependentUpon>
@@ -107,6 +108,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

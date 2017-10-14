@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Project1.CustomerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Project1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="473">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:ConnectionId='1' x:Name="listview_add_customer_" Height="234" VerticalAlignment="Top" Margin="0,0,232,0">
+            <TextBlock x:ConnectionId='19' x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
+            <TextBox x:ConnectionId='20' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
+            <TextBox x:ConnectionId='21' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
+            <Button x:ConnectionId='22' Content="Add"                           x:Name="add_customer_button_"/>
+            <TextBlock x:ConnectionId='23' x:Name="error_block_" Text=""/>
+        </ListView>
+
+        <ListView x:ConnectionId='2' x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="231" Margin="0,277,0,0" VerticalAlignment="Top" Width="195">
+            <TextBlock x:ConnectionId='15' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
+            <TextBox x:ConnectionId='16' x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
+            <Button x:ConnectionId='17' Content="Delete"                             />
+            <TextBlock x:ConnectionId='18' x:Name="delete_customer_result_block_" TextWrapping="Wrap" Text=""/>
+        </ListView>
+
+        <Button x:ConnectionId='3' x:Name="btn_back_" Content="Back" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"                         Margin="10,0,0,10"/>
+
+        <ListView x:ConnectionId='4' x:Name="listview_edit_customer_" Margin="246,0,0,363">
+            <TextBlock x:ConnectionId='9' x:Name="edit_customer_block_" TextWrapping="Wrap" Text="Edit Customer" FontSize="20"/>
+            <TextBox x:ConnectionId='10' x:Name="old_id_box_" TextWrapping="Wrap" PlaceholderText="ID of Cust. to Replace"/>
+            <TextBox x:ConnectionId='11' x:Name="new_id_box_" TextWrapping="Wrap" PlaceholderText="New Customer ID" />
+            <TextBox x:ConnectionId='12' x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
+            <Button x:ConnectionId='13' Content="Edit"                           />
+            <TextBlock x:ConnectionId='14' x:Name="edit_block_" TextWrapping="Wrap" Text=""/>
+        </ListView>
+
+
+
+        <ListView x:ConnectionId='5' x:Name="listview_find_customer" HorizontalAlignment="Left" Height="231" Margin="246,277,0,0" VerticalAlignment="Top" Width="217">
+            <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
+            <TextBox x:ConnectionId='6' x:Name="find_customer_by_id_box_" PlaceholderText="Customer ID" />
+            <Button x:ConnectionId='7' Content="Find"                           />
+            <TextBlock x:ConnectionId='8' x:Name="found_customer_block_" Text=""/>
+        </ListView>
+
+
+
+
+
+    </Grid>
+</Page>
+

@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project1 {
-    public class Object {
+    public class Customer : BaseObject {
         
-        public Object(string name, int id) {
+
+
+        public Customer(string name, int id) : base(id) {
             this.Name = name;
-            this.Id = id;
         }
 
         public string Name {

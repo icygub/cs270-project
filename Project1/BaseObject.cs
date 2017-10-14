@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project1
 {
-    abstract class BaseObject
+    public abstract class BaseObject
     {
-        public BaseObject(PrimaryKey primaryKey) {
-            this.PrimaryKey = primaryKey;
+        public BaseObject(int primaryKey) {
+            PrimaryKey = primaryKey;
         }
 
-        public PrimaryKey PrimaryKey {
+        public int PrimaryKey {
             get; set;
         }
     }
