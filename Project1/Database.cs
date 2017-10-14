@@ -14,7 +14,7 @@ namespace Project1
             this.ObjectList = new List<BaseObject>();
         } 
 
-        public virtual bool add(BaseObject baseObject) {
+        public virtual bool Add(BaseObject baseObject) {
             //will return false if same PrimaryKey exists
             foreach (BaseObject obj in ObjectList) {
                 if (baseObject.PrimaryKey == obj.PrimaryKey) {
@@ -27,66 +27,59 @@ namespace Project1
             return true;
         }
 
-        //public BaseObject findCustomer(int id) {
-        //    foreach (BaseObject c in objectList) {
-        //        if (c.Id == id) {
-        //            return c;
-        //        }
-        //    }
-        //    return null;
-        //}
+        public bool Delete(int primaryKey) {
+            //check if the baseObject exists
+            BaseObject baseObject = Find(primaryKey);
+            if (baseObject != null) {
+                //returns true
+                return ObjectList.Remove(baseObject);
+            }
+            else {
+                return false;
+            }
+        }
 
-        //public bool deleteCustomer(int id) {
-        //    //check if the baseObject exists
-        //    BaseObject customer = findCustomer(id);
-        //    if (customer != null) {
-        //        //returns true
-        //        return objectList.Remove(customer);
-        //    }
-        //    else {
-        //        return false;
-        //    }
-        //}
+        public BaseObject Find(int primaryKey) {
+            foreach (BaseObject obj in ObjectList) {
+                if (obj.PrimaryKey == primaryKey) {
+                    return obj;
+                }
+            }
+            return null;
+        }
 
-        //public bool editCustomer(int id, int newId, string newName) {
-        //    BaseObject customer = findCustomer(id);
+        public virtual bool Edit(int oldPrimaryKey, int newPrimaryKey) {
+            if (oldPrimaryKey == newPrimaryKey) {
+                return true;
+            }
+            else if (ObjectList.Count == 0) {
+                //no BaseObject exists in ObjectList
+                return false;
+            }
 
-        //    //no objectList in customerBase
-        //    if (objectList.Count == 0) {
-        //        return false;
-        //    }
-        //    //baseObject to edit does not exist
-        //    else if (customer == null) {
-        //        return false;
-        //    }
-        //    //cannot edit because newId value already exists
-        //    else if (searchForDuplicateId(newId)) {
-        //        return false;
-        //    }
-        //    //blank name not allowed
-        //    else if (newName == "") {
-        //        return false;
-        //    }
-        //    else {
-        //        customer.Id = newId;
-        //        customer.Name = newName;
-        //        return true;
-        //    }
-        //}
+            BaseObject baseObject = Find(oldPrimaryKey);
+            if (baseObject == null) {
+                return false;
+            }
+            else if (Find(newPrimaryKey) != null) {
+                //cannot edit because newPrimaryKey already exists
+                return false;
+            }
+            else {              
+                baseObject.PrimaryKey = newPrimaryKey;
+                return true;
+            }
+        }
 
         //private bool searchForDuplicateId(int id) {
         //    foreach (BaseObject c in objectList) {
-        //        if (c.Id == id) {
+        //        if (c.PrimaryKey == id) {
         //            //duplicate exists
         //            return true;
         //        }
         //    }
         //    //no duplicates exist
         //    return false;
-        //}
-
-        //public int getListSize() {
-        //    return objectList.Count;
         //}
     }
 }

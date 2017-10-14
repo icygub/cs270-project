@@ -17,96 +17,56 @@ namespace Project1 {
             customers = base.ObjectList;
         }
 
-        public override bool add(BaseObject customer) {
+        public override bool Add(BaseObject customer) {
             //blank or null name is not allowed
             if (string.IsNullOrEmpty(((Customer)customer).Name)) {
                 return false;
             }
 
-            return base.add(customer as Customer);
+            return base.Add(customer);
         }
 
-        //public override bool add(Customer customer) {
-        //    //blank or null name is not allowed
-        //    //if (string.IsNullOrEmpty(customer.Name)) {
-        //    //    return false;
-        //    //}
+        //Delete() in the base class Database
 
-        //    foreach (BaseObject c in customers) {
-        //        if (customer.PrimaryKey == c.PrimaryKey) {
-        //            //duplicate found
-        //            return false;
-        //        }
-        //    }
+        //Find() in the base class Database
 
-        //    base.add(customer);
-        //    return true;
-        //}
+        public bool Edit(int oldId, int newId, string newName) {
+            if (newName == "") {
+                return false;
+            }
 
-        public Customer findCustomer(int id) {
-            //foreach (Customer c in customers) {
-            //    if (c.PrimaryKey == id) {
-            //        return c;
-            //    }
-            //}
-            //return null;
-            return null;
+            bool idWasEdited = base.Edit(oldId, newId);
+            if (!idWasEdited) {
+                return false;
+            }
+
+            Customer customer = (Customer) Find(newId);
+            customer.Name = newName;
+            return true;
         }
 
-        public bool deleteCustomer(int id) {
-            ////check if the customer exists
-            //BaseObject customer = findCustomer(id);
-            //if (customer != null) {
-            //    //returns true
-            //    return customers.Remove(customer);
-            //}
-            //else {
-            //    return false;
-            //}
-            return false;
-        }
+        
 
-        public bool editCustomer(int id, int newId, string newName) {
-            //BaseObject customer = findCustomer(id);
 
-            ////no objectList in customerBase
-            //if (customers.Count == 0) {
-            //    return false;
-            //}
-            ////customer to edit does not exist
-            //else if (customer == null) {
-            //    return false;
-            //}
-            ////cannot edit because newId value already exists
-            //else if (searchForDuplicateId(newId)) {
-            //    return false;
-            //}
-            ////blank name not allowed
-            //else if (newName == "") {
-            //    return false;
-            //}
-            //else {
-            //    customer.Id = newId;
-            //    customer.Name = newName;
-            //    return true;
-            //}
-            return false;
-        }
-
-        private bool searchForDuplicateId(int id) {
-            //foreach (BaseObject c in customers) {
-            //    if (c.Id == id) {
-            //        //duplicate exists
-            //        return true;
-            //    }
-            //}
-            ////no duplicates exist
-            //return false;
-            return false;
-        }
 
         public int getListSize() {
             return customers.Count;
         }
+
+
+
+
+
+        //private bool searchForDuplicateId(int id) {
+        //    //foreach (BaseObject c in customers) {
+        //    //    if (c.PrimaryKey == id) {
+        //    //        //duplicate exists
+        //    //        return true;
+        //    //    }
+        //    //}
+        //    ////no duplicates exist
+        //    //return false;
+        //    return false;
+        //}
     }
 }

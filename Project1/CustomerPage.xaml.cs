@@ -37,7 +37,7 @@ namespace Project1 {
             bool customerAdded;
             try {
                 customerID = int.Parse(customer_id_box_.Text);
-                customerAdded = customerBase.add(new Customer(customerName, customerID));
+                customerAdded = customerBase.Add(new Customer(customerName, customerID));
             }
             catch {
                 error_block_.Text = "Invalid ID input. BaseObject not added.";
@@ -57,11 +57,11 @@ namespace Project1 {
                 return;
             }
 
-            customer = customerBase.findCustomer(id);
+            customer = (Customer) customerBase.Find(id);
             //will be false if customer ID does not exist
             if (customer != null) {
                 string name = customer.Name;
-                customerBase.deleteCustomer(id);
+                customerBase.Delete(id);
                 delete_customer_result_block_.Text = "BaseObject [" + name + "] [" + id + "] has been deleted";
             }
             else {
@@ -81,9 +81,9 @@ namespace Project1 {
                 return;
             }
 
-            foundCustomer = customerBase.findCustomer(searchID);
+            foundCustomer = (Customer) customerBase.Find(searchID);
             if (foundCustomer != null) {
-                text_block.Text = "NAME: [" + foundCustomer.Name + "] ID: [" + foundCustomer.Id + "]";
+                text_block.Text = "NAME: [" + foundCustomer.Name + "] ID: [" + foundCustomer.PrimaryKey + "]";
             }
             else {
                 text_block.Text = "BaseObject not found";
@@ -94,17 +94,17 @@ namespace Project1 {
             int oldId;
             int newId;
             string newName = new_name_box_.Text;
-            TextBox idTextBox = old_id_box_;
+            TextBox oldIdTextBox = old_id_box_;
             TextBox newIdTextBox = new_id_box_;
             TextBlock textBlock = edit_block_;
-            if (idTextBox.Text == "") {
+            if (oldIdTextBox.Text == "") {
                 textBlock.Text = "Initial ID required!";
                 return;
             }
-            if (textIsConvertibleToInt(idTextBox, textBlock) && textIsConvertibleToInt(newIdTextBox, textBlock)) {
-                oldId = int.Parse(idTextBox.Text);
+            if (textIsConvertibleToInt(oldIdTextBox, textBlock) && textIsConvertibleToInt(newIdTextBox, textBlock)) {
+                oldId = int.Parse(oldIdTextBox.Text);
                 newId = int.Parse(newIdTextBox.Text);
-                if (customerBase.editCustomer(oldId, newId, newName)) {
+                if (customerBase.Edit(oldId, newId, newName)) {
                     textBlock.Text = "Success!";
                 }
                 else {

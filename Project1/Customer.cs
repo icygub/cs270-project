@@ -16,9 +16,5 @@ namespace Project1 {
         public string Name {
             set; get;
         }
-
-        public int Id {
-            set; get;
-        }
     }
 }

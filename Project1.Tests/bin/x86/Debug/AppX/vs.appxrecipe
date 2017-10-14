@@ -31,17 +31,17 @@
     <AppXManifest Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-14T16:59:55.401</Modified>
+      <Modified>2017-10-14T23:29:30.196</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Project1.Tests.exe">
       <PackagePath>entrypoint\Project1.Tests.exe</PackagePath>
-      <Modified>2017-10-14T16:59:52.570</Modified>
+      <Modified>2017-10-14T23:29:27.564</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.exe">
       <PackagePath>Project1.exe</PackagePath>
-      <Modified>2017-10-14T16:59:10.615</Modified>
+      <Modified>2017-10-14T23:29:24.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\15.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll</PackagePath>
@@ -612,7 +612,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1.Tests\bin\x86\Debug\Core\Project1.Tests.exe">
       <PackagePath>Project1.Tests.exe</PackagePath>
-      <Modified>2017-10-14T16:59:55.397</Modified>
+      <Modified>2017-10-14T23:29:30.190</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

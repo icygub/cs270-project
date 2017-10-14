@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-14T16:59:10.972</Modified>
+      <Modified>2017-10-14T23:29:25.401</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Project1.exe">
       <PackagePath>entrypoint\Project1.exe</PackagePath>
-      <Modified>2017-10-14T16:59:10.615</Modified>
+      <Modified>2017-10-14T23:29:24.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -552,7 +552,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\icyhot\source\repos\cs270-project\Project1\bin\x86\Debug\Core\Project1.exe">
       <PackagePath>Project1.exe</PackagePath>
-      <Modified>2017-10-14T16:59:10.968</Modified>
+      <Modified>2017-10-14T23:29:25.395</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
