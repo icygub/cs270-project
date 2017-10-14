@@ -23,5 +23,9 @@ namespace Project1 {
         public CargoPlanePage() {
             this.InitializeComponent();
         }
+
+        private void btn_back_cargo_plane__Click(object sender, RoutedEventArgs e) {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
     }
 }

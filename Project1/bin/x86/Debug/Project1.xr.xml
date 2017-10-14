@@ -13,18 +13,27 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
@@ -36,19 +45,14 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Project1.CargoPlanePage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Items" />
-    </RootType>
     <RootType FullName="Project1.CustomerPage" />
     <RootType FullName="Project1.MainPage" />
   </Roots.RootTypes>

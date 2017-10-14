@@ -37,17 +37,17 @@ namespace Project1 {
             bool customerAdded;
             try {
                 customerID = int.Parse(customer_id_box_.Text);
-                customerAdded = customerBase.addCustomer(new Customer(customerName, customerID));
+                customerAdded = customerBase.addCustomer(new Object(customerName, customerID));
             }
             catch {
-                error_block_.Text = "Invalid ID input. Customer not added.";
+                error_block_.Text = "Invalid ID input. Object not added.";
             }
             error_block_.Text = customerBase.getListSize().ToString();
         }
 
         private void DeleteCustomer_Click(object sender, RoutedEventArgs e) {
             int id;
-            Customer customer;
+            Object customer;
             //making sure user enters an int
             try {
                 id = int.Parse(delete_customer_by_id_box_.Text);
@@ -62,16 +62,16 @@ namespace Project1 {
             if (customer != null) {
                 string name = customer.Name;
                 customerBase.deleteCustomer(id);
-                delete_customer_result_block_.Text = "Customer [" + name + "] [" + id + "] has been deleted";
+                delete_customer_result_block_.Text = "Object [" + name + "] [" + id + "] has been deleted";
             }
             else {
-                delete_customer_result_block_.Text = "Customer does not exist.";
+                delete_customer_result_block_.Text = "Object does not exist.";
             }
         }
 
         private void FindCustomer_Click(object sender, RoutedEventArgs e) {
             int searchID;
-            Customer foundCustomer;
+            Object foundCustomer;
             TextBlock text_block = found_customer_block_; //displays results. Created text_block to avoid repetition
             try {
                 searchID = int.Parse(find_customer_by_id_box_.Text);
@@ -86,7 +86,7 @@ namespace Project1 {
                 text_block.Text = "NAME: [" + foundCustomer.Name + "] ID: [" + foundCustomer.Id + "]";
             }
             else {
-                text_block.Text = "Customer not found";
+                text_block.Text = "Object not found";
             }
         }
 

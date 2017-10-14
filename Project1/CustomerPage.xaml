@@ -8,33 +8,41 @@
     mc:Ignorable="d" Width="473">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView Height="640" VerticalAlignment="Top" Margin="0,0,232,0">
+        <ListView x:Name="listview_add_customer_" Height="234" VerticalAlignment="Top" Margin="0,0,232,0">
             <TextBlock x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
             <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
             <TextBox x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
             <Button Content="Add" Click="AddCustomer_Click" x:Name="add_customer_button_"/>
             <TextBlock x:Name="error_block_" Text=""/>
+        </ListView>
+
+        <ListView x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="231" Margin="0,277,0,0" VerticalAlignment="Top" Width="195">
             <TextBlock x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
             <TextBox x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
             <Button Content="Delete" Click="DeleteCustomer_Click"/>
             <TextBlock x:Name="delete_customer_result_block_" TextWrapping="Wrap" Text=""/>
-            <Button x:Name="btn_back_" Content="Back" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Click="btn_back__Click"/>
-
         </ListView>
-        <ListView Margin="246,0,0,0">
+
+        <Button x:Name="btn_back_" Content="Back" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Click="btn_back__Click" Margin="10,0,0,10"/>
+
+        <ListView x:Name="listview_edit_customer_" Margin="246,0,0,363">
             <TextBlock x:Name="edit_customer_block_" TextWrapping="Wrap" Text="Edit Customer" FontSize="20"/>
             <TextBox x:Name="old_id_box_" TextWrapping="Wrap" PlaceholderText="ID of Cust. to Replace"/>
             <TextBox x:Name="new_id_box_" TextWrapping="Wrap" PlaceholderText="New Customer ID" />
             <TextBox x:Name="new_name_box_" TextWrapping="Wrap" PlaceholderText="New Customer Name" />
             <Button Content="Edit" Click="EditCustomer_Click"/>
             <TextBlock x:Name="edit_block_" TextWrapping="Wrap" Text=""/>
+        </ListView>
+
+
+
+        <ListView x:Name="listview_find_customer" HorizontalAlignment="Left" Height="231" Margin="246,277,0,0" VerticalAlignment="Top" Width="217">
             <TextBlock TextWrapping="Wrap" Text="Find Customer" FontSize="20"/>
             <TextBox x:Name="find_customer_by_id_box_" PlaceholderText="Customer ID" />
             <Button Content="Find" Click="FindCustomer_Click"/>
             <TextBlock x:Name="found_customer_block_" Text=""/>
-
-
         </ListView>
+
 
 
 

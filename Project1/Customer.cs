@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project1 {
-    public class Customer {
+    public class Object {
         
-        public Customer(string name, int id) {
+        public Object(string name, int id) {
             this.Name = name;
             this.Id = id;
         }

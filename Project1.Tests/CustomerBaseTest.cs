@@ -13,7 +13,7 @@ namespace Project1.Tests {
             public void ReturnTrue_WhenOneCustomerIsAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 Assert.IsTrue(customerBase.getListSize() == 0);
-                Assert.IsTrue(customerBase.addCustomer(new Customer("John", 1234)));
+                Assert.IsTrue(customerBase.addCustomer(new Object("John", 1234)));
                 Assert.IsTrue(customerBase.getListSize() == 1);
                 
             }
@@ -21,9 +21,9 @@ namespace Project1.Tests {
             public void ReturnTrue_WhenThreeCustomersAreAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
                 Assert.IsTrue(customerBase.getListSize() == 0);
-                Assert.IsTrue(customerBase.addCustomer(new Customer("John", 4)));
-                Assert.IsTrue(customerBase.addCustomer(new Customer("Abraham", 3456)));
-                Assert.IsTrue(customerBase.addCustomer(new Customer("Isaac", 7890)));
+                Assert.IsTrue(customerBase.addCustomer(new Object("John", 4)));
+                Assert.IsTrue(customerBase.addCustomer(new Object("Abraham", 3456)));
+                Assert.IsTrue(customerBase.addCustomer(new Object("Isaac", 7890)));
                 Assert.IsTrue(customerBase.getListSize() == 3);
 
 
@@ -31,16 +31,16 @@ namespace Project1.Tests {
             [TestMethod]
             public void ReturnFalse_WhenIDAlreadyExists() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Gibran", 1111));
-                customerBase.addCustomer(new Customer("Cody", 2222));
-                customerBase.addCustomer(new Customer("James", 3333));
-                Assert.IsFalse(customerBase.addCustomer(new Customer("Michael", 3333)));
+                customerBase.addCustomer(new Object("Gibran", 1111));
+                customerBase.addCustomer(new Object("Cody", 2222));
+                customerBase.addCustomer(new Object("James", 3333));
+                Assert.IsFalse(customerBase.addCustomer(new Object("Michael", 3333)));
             }
             [TestMethod]
             public void ReturnFalse_WhenNameIsAnEmptyStringOrNull() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
-                Assert.IsFalse(customerBase.addCustomer(new Customer("", 4444)));
-                Assert.IsFalse(customerBase.addCustomer(new Customer(null, 2222)));
+                Assert.IsFalse(customerBase.addCustomer(new Object("", 4444)));
+                Assert.IsFalse(customerBase.addCustomer(new Object(null, 2222)));
                 Assert.IsTrue(customerBase.getListSize() == 0);
             }
         }
@@ -50,9 +50,9 @@ namespace Project1.Tests {
             [TestMethod]
             public void ReturnCustomer_WhenCustomerIDIsFound() {
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Joey", 1121));
-                customerBase.addCustomer(new Customer("Jordan", 9999));
-                customerBase.addCustomer(new Customer("Jacob", 2223));
+                customerBase.addCustomer(new Object("Joey", 1121));
+                customerBase.addCustomer(new Object("Jordan", 9999));
+                customerBase.addCustomer(new Object("Jacob", 2223));
                 Assert.IsNotNull(customerBase.findCustomer(1121));
                 Assert.IsNotNull(customerBase.findCustomer(9999));
                 Assert.IsNotNull(customerBase.findCustomer(2223));
@@ -60,8 +60,8 @@ namespace Project1.Tests {
             [TestMethod]
             public void ReturnNull_WhenCustomerIDIsNotFound() {
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Jackson", 1234));
-                customerBase.addCustomer(new Customer("Roger", 5678));
+                customerBase.addCustomer(new Object("Jackson", 1234));
+                customerBase.addCustomer(new Object("Roger", 5678));
                 Assert.IsNull(customerBase.findCustomer(3344));
             }
         }
@@ -71,8 +71,8 @@ namespace Project1.Tests {
             [TestMethod]
             public void ReturnTrue_WhenCustomerIsDeleted() {
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Joseph", 1329));
-                customerBase.addCustomer(new Customer("Brigham", 8791));
+                customerBase.addCustomer(new Object("Joseph", 1329));
+                customerBase.addCustomer(new Object("Brigham", 8791));
                 Assert.IsTrue(customerBase.deleteCustomer(1329));
                 Assert.IsTrue(customerBase.deleteCustomer(8791));
                 Assert.IsTrue(customerBase.getListSize() == 0);
@@ -80,8 +80,8 @@ namespace Project1.Tests {
             [TestMethod]
             public void ReturnFalse_WhenCustomerIdDoesNotExist() {
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Abraham", 8734));
-                customerBase.addCustomer(new Customer("Lincoln", 9010));
+                customerBase.addCustomer(new Object("Abraham", 8734));
+                customerBase.addCustomer(new Object("Lincoln", 9010));
                 Assert.IsFalse(customerBase.deleteCustomer(7777));
                 Assert.IsTrue(customerBase.getListSize() == 2);
             }
@@ -101,9 +101,9 @@ namespace Project1.Tests {
             [TestMethod]
             public void Return3_WhenThreeCustomersAreAdded() {
                 CustomerBase customerBase = new CustomerBase();
-                customerBase.addCustomer(new Customer("Joey", 1121));
-                customerBase.addCustomer(new Customer("Jordan", 9999));
-                customerBase.addCustomer(new Customer("Jacob", 2223));
+                customerBase.addCustomer(new Object("Joey", 1121));
+                customerBase.addCustomer(new Object("Jordan", 9999));
+                customerBase.addCustomer(new Object("Jacob", 2223));
                 Assert.IsTrue(customerBase.getListSize() == 3);
             }
         }

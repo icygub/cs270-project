@@ -5,16 +5,21 @@
     xmlns:local="using:Project1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="780">
+    mc:Ignorable="d" Width="578">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" Margin="38,254,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="block_add_plane_" HorizontalAlignment="Left" Margin="38,37,0,0" TextWrapping="Wrap" Text="Add Plane" VerticalAlignment="Top" FontSize="20"/>
-        <TextBox x:Name="box_plane_company_" HorizontalAlignment="Left" Margin="38,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Company Name"/>
-        <TextBox x:Name="box_plane_number_" HorizontalAlignment="Left" Margin="38,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Plane Number"/>
-        <TextBox x:Name="box_mileage_" HorizontalAlignment="Left" Margin="38,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Mileage Per Tank"/>
-        <TextBox x:Name="box_capacity_" HorizontalAlignment="Left" Margin="38,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Seat Capacity"/>
-        <TextBox x:Name="box_weight_capacity_" HorizontalAlignment="Left" Margin="38,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Weight Capacity (lbs)"/>
+        <ListView Margin="10,10,364,312">
+            <TextBlock x:Name="block_add_plane_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Add Plane" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="box_plane_number_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Plane Number"/>
+            <TextBox x:Name="box_plane_company_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Company Name" Height="30" Width="139"/>
+            <TextBox x:Name="box_mileage_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Mileage Per Tank"/>
+            <TextBox x:Name="box_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Seat Capacity"/>
+            <TextBox x:Name="box_weight_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Weight Capacity (lbs)" Height="25"/>
+            <Button x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="95"/>
+        </ListView>
+        <Button x:Name="btn_back_cargo_plane_" Content="Back" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top" Click="btn_back_cargo_plane__Click"/>
+
+
 
     </Grid>
 </Page>
