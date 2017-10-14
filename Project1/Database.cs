@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project1
 {
-    abstract class ObjectBase
+    abstract class Database
     {
         List<System.Object> objList = new List<System.Object>();
 
