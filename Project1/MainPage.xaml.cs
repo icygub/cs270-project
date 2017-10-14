@@ -27,8 +27,12 @@ namespace Project1
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
+        private void Btn_Go_To_Customer_Click(object sender, RoutedEventArgs e) {
             this.Frame.Navigate(typeof(CustomerPage), null);
+        }
+
+        private void Btn_Go_To_Cargo_Plane_Click(object sender, RoutedEventArgs e) {
+            this.Frame.Navigate(typeof(CargoPlanePage), null);
         }
     }
 }

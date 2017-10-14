@@ -8,7 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Customer" HorizontalAlignment="Left" Margin="66,83,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="btn_go_to_customer_" Content="Customer" HorizontalAlignment="Left" Margin="66,83,0,0" VerticalAlignment="Top" Click="Btn_Go_To_Customer_Click"/>
+        <Button x:Name="btn_go_to_cargo_plane_" Content="Cargo Plane" HorizontalAlignment="Left" Margin="210,83,0,0" VerticalAlignment="Top" Click="Btn_Go_To_Cargo_Plane_Click"/>
 
     </Grid>
 </Page>

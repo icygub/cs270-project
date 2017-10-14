@@ -7,11 +7,19 @@ using System.Threading.Tasks;
 namespace Project1 {
     class CargoPlane {
 
-        public CargoPlane(string company, int mileagePerTank, int seatCapacity, int weightLbsCapacity) {
-
+        public CargoPlane(string company, string planeNumber, int mileagePerTank, int seatCapacity, int weightLbsCapacity) {
+            this.Company = company;
+            this.PlaneNumber = planeNumber;
+            this.MileagePerTank = mileagePerTank;
+            this.SeatCapacity = seatCapacity;
+            this.WeightLbsCapacity = weightLbsCapacity;
         }
 
         public string Company {
+            get; set;
+        }
+
+        public string PlaneNumber {
             get; set;
         }
 

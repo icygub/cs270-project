@@ -18,6 +18,7 @@
             <TextBox x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
             <Button Content="Delete" Click="DeleteCustomer_Click"/>
             <TextBlock x:Name="delete_customer_result_block_" TextWrapping="Wrap" Text=""/>
+            <Button x:Name="btn_back_" Content="Back" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" Click="btn_back__Click"/>
 
         </ListView>
         <ListView Margin="246,0,0,0">

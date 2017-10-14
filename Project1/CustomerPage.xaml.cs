@@ -124,6 +124,8 @@ namespace Project1 {
             }
         }
 
-
+        private void btn_back__Click(object sender, RoutedEventArgs e) {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
     }
 }
