@@ -8,7 +8,7 @@ namespace Project1.Tests {
     public class CustomerBaseTest {
 
         [TestClass]
-        public class AddCustomer_Should { //WORKING
+        public class Add_Should { //WORKING
             [TestMethod]
             public void ReturnTrue_WhenOneCustomerIsAdded() { //WORKING
                 CustomerBase customerBase = new CustomerBase();
@@ -88,7 +88,7 @@ namespace Project1.Tests {
         }
 
         [TestClass]
-        public class EditCustomer_Should {
+        public class Edit_Should {
             [TestMethod]
             public void ReturnTrue_WhenOnlyCustomerNameIsEdited() {
                 CustomerBase customerBase = new CustomerBase();

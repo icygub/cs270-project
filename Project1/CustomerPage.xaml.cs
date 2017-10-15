@@ -91,35 +91,41 @@ namespace Project1 {
         }
 
         private void EditCustomer_Click(object sender, RoutedEventArgs e) {
-            int oldId;
+            int oldId = 0;
             int newId;
-            string newName = new_name_box_.Text;
+            string newName = new_name_box_.Text;          
             TextBox oldIdTextBox = old_id_box_;
             TextBox newIdTextBox = new_id_box_;
+            TextBox newNameBox = new_name_box_;
             TextBlock textBlock = edit_block_;
-            if (oldIdTextBox.Text == "") {
-                textBlock.Text = "Initial ID required!";
+            textBlock.Text = "";
+
+            if (textIsConvertibleToInt(oldIdTextBox)) {
+                oldId = int.Parse(oldIdTextBox.Text);
+            } else {
                 return;
             }
-            if (textIsConvertibleToInt(oldIdTextBox, textBlock) && textIsConvertibleToInt(newIdTextBox, textBlock)) {
-                oldId = int.Parse(oldIdTextBox.Text);
+
+            
+            if(customerBase.EditName(oldId, newName)) {
+                textBlock.Text += "Name changed. ";
+            }
+
+            if (textIsConvertibleToInt(newIdTextBox)) {
                 newId = int.Parse(newIdTextBox.Text);
-                if (customerBase.Edit(oldId, newId, newName)) {
-                    textBlock.Text = "Success!";
-                }
-                else {
-                    textBlock.Text = "Failure.";
+                if (customerBase.Edit(oldId, newId)) {
+                    textBlock.Text += "ID changed";
                 }
             }
         }
 
-        private bool textIsConvertibleToInt(TextBox textBox, TextBlock textBlock) {
+        private bool textIsConvertibleToInt(TextBox textBox) {
             try {
                 int.Parse(textBox.Text);
                 return true;
             }
             catch {
-                textBlock.Text = "ID input is not an int.";
+                //textBlock.Text = "ID input is not an int.";
                 return false;
             }
         }

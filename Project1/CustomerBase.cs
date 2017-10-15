@@ -45,6 +45,15 @@ namespace Project1 {
             return true;
         }
 
+        public bool EditName(int id, string newName) {
+            Customer customer = (Customer) Find(id);
+            if(customer != null && newName != "") {
+                customer.Name = newName;
+                return true;
+            }
+            return false;
+        }
+
         
 
 
