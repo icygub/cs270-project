@@ -32,15 +32,20 @@ namespace Project1 {
         }
 
         private void AddCustomer_Click(object sender, RoutedEventArgs e) {
-            string customerName = customer_name_box_.Text;
-            int customerID = 0;
+            string name = customer_name_box_.Text;
+            
             bool customerAdded;
             try {
-                customerID = int.Parse(customer_id_box_.Text);
-                customerAdded = customerBase.Add(new Customer(customerName, customerID));
+                int id = int.Parse(customer_id_box_.Text);
+                string street = customer_street_box_.Text;
+                string city = customer_city_box_.Text;
+                string state = customer_state_box_.Text;
+                int zipCode = int.Parse(customer_zip_box_.Text);
+                string email = customer_email_box_.Text;
+                customerAdded = customerBase.Add(new Customer(name, id, new Address(street,city,state,zipCode),email));
             }
             catch {
-                error_block_.Text = "Invalid ID input. BaseObject not added.";
+                error_block_.Text = "Invalid input. BaseObject not added.";
             }
             error_block_.Text = customerBase.getListSize().ToString();
         }

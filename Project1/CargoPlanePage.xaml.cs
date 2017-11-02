@@ -27,5 +27,23 @@ namespace Project1 {
         private void btn_back_cargo_plane__Click(object sender, RoutedEventArgs e) {
             this.Frame.Navigate(typeof(MainPage), null);
         }
+
+        private void btn_add_plane__Click(object sender, RoutedEventArgs e) {
+            TextBox planeNumber = box_plane_number_;
+            //if (TextIsConvertibleToInt(box_pl))
+        }
+
+        private bool TextIsConvertibleToInt(TextBox textBox) {
+            try {
+                int.Parse(textBox.Text);
+                return true;
+            }
+            catch {
+                //textBlock.Text = "ID input is not an int.";
+                return false;
+            }
+        }
+
+       
     }
 }

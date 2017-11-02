@@ -7,16 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Width="473">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listview_add_customer_" Height="234" VerticalAlignment="Top" Margin="0,0,232,0">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-189,-191">
+        <ListView x:Name="listview_add_customer_" Height="468" VerticalAlignment="Top" Margin="0,0,232,0">
             <TextBlock x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
-            <TextBox x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
+            <TextBox x:Name="customer_id_box_" PlaceholderText="Customer ID" Width="102"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name" Width="204"/>
+            <TextBox x:Name="customer_street_box_" TextWrapping="Wrap" Text="" PlaceholderText="Street" Width="208"/>
+            <TextBox x:Name="customer_city_box_" TextWrapping="Wrap" Text="" PlaceholderText="City" Width="206"/>
+            <TextBox x:Name="customer_state_box_" TextWrapping="Wrap" Text="" PlaceholderText="State" Width="205"/>
+            <TextBox x:Name="customer_zip_box_" TextWrapping="Wrap" Text="" PlaceholderText="Zip Code" Width="109"/>
+            <TextBox x:Name="customer_email_box_" TextWrapping="Wrap" Text="" PlaceholderText="E-mail" Width="200"/>
             <Button Content="Add" Click="AddCustomer_Click" x:Name="add_customer_button_"/>
             <TextBlock x:Name="error_block_" Text=""/>
+
         </ListView>
 
-        <ListView x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="231" Margin="0,277,0,0" VerticalAlignment="Top" Width="195">
+        <ListView x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="196" Margin="0,529,0,0" VerticalAlignment="Top" Width="195">
             <TextBlock x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
             <TextBox x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
             <Button Content="Delete" Click="DeleteCustomer_Click"/>

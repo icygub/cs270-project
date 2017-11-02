@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="BaseObject.cs" />
     <Compile Include="CargoPlane.cs" />
+    <Compile Include="CargoPlaneBase.cs" />
     <Compile Include="CargoPlanePage.xaml.cs">
       <DependentUpon>CargoPlanePage.xaml</DependentUpon>
     </Compile>

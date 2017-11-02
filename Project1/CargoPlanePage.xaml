@@ -15,9 +15,19 @@
             <TextBox x:Name="box_mileage_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Mileage Per Tank"/>
             <TextBox x:Name="box_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Seat Capacity"/>
             <TextBox x:Name="box_weight_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Weight Capacity (lbs)" Height="25"/>
-            <Button x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="95"/>
+            <Button x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="95" Click="btn_add_plane__Click"/>
         </ListView>
         <Button x:Name="btn_back_cargo_plane_" Content="Back" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top" Click="btn_back_cargo_plane__Click"/>
+        <ListView HorizontalAlignment="Left" Height="360" Margin="270,10,0,0" VerticalAlignment="Top" Width="298" SelectionChanged="ListView_SelectionChanged">
+            <TextBlock x:Name="schedule_flight_block_" TextWrapping="Wrap" Text="Schedule a Flight" FontSize="20"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="151" PlaceholderText="Customer #"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="150" PlaceholderText="Cargo Plane #"/>
+            <CalendarDatePicker PlaceholderText="Date"/>
+            <TimePicker Width="155"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="151" PlaceholderText="Origin Airport"/>
+            <TextBox TextWrapping="Wrap" Text="" Width="150" PlaceholderText="Destination Airport"/>
+            <Button x:Name="schedule_flight_button_" Content="Schedule"/>
+        </ListView>
 
 
 

@@ -7,16 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Width="473">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:ConnectionId='1' x:Name="listview_add_customer_" Height="234" VerticalAlignment="Top" Margin="0,0,232,0">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-189,-191">
+        <ListView x:ConnectionId='1' x:Name="listview_add_customer_" Height="468" VerticalAlignment="Top" Margin="0,0,232,0">
             <TextBlock x:ConnectionId='19' x:Name="add_customer_block_" Text="Add Customer" FontSize="20" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
-            <TextBox x:ConnectionId='20' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
-            <TextBox x:ConnectionId='21' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
-            <Button x:ConnectionId='22' Content="Add"                           x:Name="add_customer_button_"/>
-            <TextBlock x:ConnectionId='23' x:Name="error_block_" Text=""/>
+            <TextBox x:ConnectionId='20' x:Name="customer_id_box_" PlaceholderText="Customer ID"/>
+            <TextBox x:ConnectionId='21' HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="customer_name_box_" PlaceholderText="Customer Name"/>
+            <TextBox x:ConnectionId='22' x:Name="customer_street_box_" TextWrapping="Wrap" Text="" PlaceholderText="Street"/>
+            <TextBox x:ConnectionId='23' x:Name="customer_city_box_" TextWrapping="Wrap" Text="" PlaceholderText="City"/>
+            <TextBox x:ConnectionId='24' x:Name="customer_state_box_" TextWrapping="Wrap" Text="" PlaceholderText="State"/>
+            <TextBox x:ConnectionId='25' x:Name="customer_zip_box_" TextWrapping="Wrap" Text="" PlaceholderText="Zip Code"/>
+            <TextBox x:ConnectionId='26' x:Name="customer_email_box_" TextWrapping="Wrap" Text="" PlaceholderText="E-mail"/>
+            <Button x:ConnectionId='27' Content="Add"                           x:Name="add_customer_button_"/>
+            <TextBlock x:ConnectionId='28' x:Name="error_block_" Text=""/>
+
         </ListView>
 
-        <ListView x:ConnectionId='2' x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="231" Margin="0,277,0,0" VerticalAlignment="Top" Width="195">
+        <ListView x:ConnectionId='2' x:Name="listview_delete_customer_" HorizontalAlignment="Left" Height="196" Margin="0,529,0,0" VerticalAlignment="Top" Width="195">
             <TextBlock x:ConnectionId='15' x:Name="delete_customer_block_" TextWrapping="Wrap" Text="Delete Customer" FontSize="20"/>
             <TextBox x:ConnectionId='16' x:Name="delete_customer_by_id_box_" TextWrapping="Wrap" PlaceholderText="Customer ID"/>
             <Button x:ConnectionId='17' Content="Delete"                             />

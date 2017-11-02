@@ -15,7 +15,7 @@
             <TextBox x:ConnectionId='5' x:Name="box_mileage_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Mileage Per Tank"/>
             <TextBox x:ConnectionId='6' x:Name="box_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Seat Capacity"/>
             <TextBox x:ConnectionId='7' x:Name="box_weight_capacity_" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Weight Capacity (lbs)" Height="25"/>
-            <Button x:ConnectionId='8' x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="95"/>
+            <Button x:ConnectionId='8' x:Name="btn_add_plane_" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="95"                             />
         </ListView>
         <Button x:ConnectionId='1' x:Name="btn_back_cargo_plane_" Content="Back" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top"                                    />
 
